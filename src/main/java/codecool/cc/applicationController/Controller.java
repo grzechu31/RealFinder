@@ -1,17 +1,15 @@
 package codecool.cc.applicationController;
 
 import codecool.cc.DataHandler.UserData;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
+@org.springframework.stereotype.Controller
 public class Controller {
 
-    @GetMapping("/")
-    public String homePage(){
-        return "Home Page";
+    @GetMapping("/index")
+    public String greeting() {
+        return "index";
     }
 
     @GetMapping("/login")
